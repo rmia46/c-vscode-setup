@@ -1,5 +1,3 @@
-# c-vscode-setup
-
 # Setting up VS-Code with GCC
 
 ## Setting up MinGW on Windows
@@ -8,7 +6,9 @@
 
 ![image-of-mingw-github-repo](https://github.com/rmia46/c-vscode-setup/blob/main/img/Screenshot_20240101_100522.png)
 
-2. **Run the Installer:** Double-click the downloaded installer file and follow the on-screen instructions to run the MinGW-w64 installation wizard. Choose the installation directory (e.g., `C:\mingw-w64`) and select the desired components to install. Make sure to include the C and C++ compilers.
+2. **Run the Installer:** Double-click the downloaded installer file and follow the on-screen instructions to run the MinGW-w64 installation wizard. Choose the installation directory (e.g., `C:\mssys64`) and select the desired components to install. Make sure to include the C and C++ compilers.
+
+![mingw-installation image](https://github.com/rmia46/c-vscode-setup/blob/main/img/mingw.gif)
 
 3. **Add MinGW to the PATH variable:** This step is very important. After installation, you need to add the MinGW directory to the system's PATH environment variable. This allows you to run MinGW commands from any location in the command prompt.
 
@@ -16,10 +16,12 @@
    - Select `Edit the system environment variables.`
    - In the `System Properties` window, click on the `Environment Variables` button.
    - In the `System Variables` section, select the `Path` variable and click the `Edit` button.
-   - Add a new entry with the path to the MinGW `bin` directory (e.g., `C:\mingw-w64\mingw64\bin` or `C:\mingw-w64\mingw32\bin`).
+   - Add a new entry with the path to the MinGW `bin` directory (e.g., `C:\mssys64\clang64\bin` or `C:\mingw-w64\clang32\bin` for 32bit system).
    - Click `OK` to save the changes.
 
 4. **Verify the Installation:** Open a new command prompt aka `cmd` window and type `g++ --version` to verify that the MinGW installation was successful. You should see the version information of the C++ compiler. Otherwise it will show an error. On that case follow the previous steps again carefully.
+
+![path-variable image](https://github.com/rmia46/c-vscode-setup/blob/main/img/output.gif)
 
 ## Setting up Visual Studio Code
 
