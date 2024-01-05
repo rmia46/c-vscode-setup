@@ -10,8 +10,6 @@
 
 3. **Verify the Installation:** Open a new command prompt aka `cmd` window and type `g++ --version` to verify that the MinGW installation was successful. You should see the version information of the C++ compiler. Otherwise it will show an error. On that case follow the step 4 carefully.
 
-![path-variable image](https://github.com/rmia46/c-vscode-setup/blob/main/img/output.gif)
-
 4. **Add MinGW to the PATH variable:** After installation, you need to add the MinGW directory to the system's PATH environment variable in case it doesn't get added automatically. This allows you to run MinGW commands from any location in the command prompt.
 
    - Open the Start menu and search for `Environment Variables.`
@@ -20,6 +18,10 @@
    - In the `System Variables` section, select the `Path` variable and click the `Edit` button.
    - Add a new entry with the path to the MinGW `bin` directory (e.g., `C:\MinGW-64\bin`).
    - Click `OK` to save the changes.
+
+![path-variable image](https://github.com/rmia46/c-vscode-setup/blob/main/img/output.gif)
+
+
 ## Setting up Visual Studio Code
 
 1. **Download and Install VS Code:** Visit the official [VS Code website](https://code.visualstudio.com) and download the installer for Windows. Run the installer and follow the on-screen instructions to install VS Code.
