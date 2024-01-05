@@ -2,27 +2,24 @@
 
 ## Setting up MinGW on Windows
 
-1. **Download MinGW:** Download the mingw64 compiler from this [Github Repo](https://github.com/msys2/msys2-installer/releases) Choose the `msys2-x86_64-20231026.exe` file. The version might get updated. Just select the x64 version.
+1. **Download MinGW easy-installer:** Download the mingw64 compiler from this [Github Repo](https://github.com/ehsan18t/easy-mingw-installer/releases) Choose the latest release, `Easy.MinGW.Installer.v2023.11.22.64-bit.exe` (This was the latest version at the time of writing this article). The version might get updated. Just select the x64 version.
 
-![image-of-mingw-github-repo](https://github.com/rmia46/c-vscode-setup/blob/main/img/Screenshot_20240101_100522.png)
+![image-of-mingw-github-repo](https://github.com/rmia46/c-vscode-setup/blob/main/img/mingw-installer.png)
 
-2. **Run the Installer:** Double-click the downloaded installer file and follow the on-screen instructions to run the MinGW-w64 installation wizard. Choose the installation directory (e.g., `C:\mssys64`) and select the desired components to install. Make sure to include the C and C++ compilers.
+2. **Run the Installer:** Double-click the downloaded installer file and follow the on-screen instructions to run the MinGW-w64 installation wizard.
 
-![mingw-installation image](https://github.com/rmia46/c-vscode-setup/blob/main/img/mingw.gif)
+3. **Verify the Installation:** Open a new command prompt aka `cmd` window and type `g++ --version` to verify that the MinGW installation was successful. You should see the version information of the C++ compiler. Otherwise it will show an error. On that case follow the step 4 carefully.
 
-3. **Add MinGW to the PATH variable:** This step is very important. After installation, you need to add the MinGW directory to the system's PATH environment variable. This allows you to run MinGW commands from any location in the command prompt.
+![path-variable image](https://github.com/rmia46/c-vscode-setup/blob/main/img/output.gif)
+
+4. **Add MinGW to the PATH variable:** After installation, you need to add the MinGW directory to the system's PATH environment variable in case it doesn't get added automatically. This allows you to run MinGW commands from any location in the command prompt.
 
    - Open the Start menu and search for `Environment Variables.`
    - Select `Edit the system environment variables.`
    - In the `System Properties` window, click on the `Environment Variables` button.
    - In the `System Variables` section, select the `Path` variable and click the `Edit` button.
-   - Add a new entry with the path to the MinGW `bin` directory (e.g., `C:\mssys64\clang64\bin` or `C:\mingw-w64\clang32\bin` for 32bit system).
+   - Add a new entry with the path to the MinGW `bin` directory (e.g., `C:\MinGW-64\bin`).
    - Click `OK` to save the changes.
-
-4. **Verify the Installation:** Open a new command prompt aka `cmd` window and type `g++ --version` to verify that the MinGW installation was successful. You should see the version information of the C++ compiler. Otherwise it will show an error. On that case follow the previous steps again carefully.
-
-![path-variable image](https://github.com/rmia46/c-vscode-setup/blob/main/img/output.gif)
-
 ## Setting up Visual Studio Code
 
 1. **Download and Install VS Code:** Visit the official [VS Code website](https://code.visualstudio.com) and download the installer for Windows. Run the installer and follow the on-screen instructions to install VS Code.
